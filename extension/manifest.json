@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "Should I?",
+  "version": "1.0",
+  "description": "Analyzes Amazon product reviews and tells if it's safe to buy or not.",
+  "icons": {
+    "16": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:5000/*",
+    "https://www.amazon.in/*",
+    "https://www.amazon.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "logo.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.amazon.in/*",
+        "https://www.amazon.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["content_styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/*",
+        "logo.png"
+      ],
+      "matches": [
+        "https://www.amazon.in/*",
+        "https://www.amazon.com/*"
+      ]
+    }
+  ]
+}

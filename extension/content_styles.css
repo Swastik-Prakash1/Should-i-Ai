@@ -1,0 +1,7 @@
+/* content_styles.css - optional */
+#should-i-panel {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+#should-i-panel img {
+  display: block;
+}
