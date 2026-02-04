@@ -1,0 +1,9 @@
+numpy
+pandas
+scikit-learn==1.5.1
+matplotlib
+seaborn
+flask
+flask-cors
+joblib
+pickle-mixin
