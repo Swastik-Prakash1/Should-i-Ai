@@ -69,7 +69,7 @@ Manual verification is unreliable and time-consuming.
 - Transformer-based NLP models
 - Detects unnatural or manipulative review patterns
 - Outputs trust classification (🟢 / 🟡 / 🔴)
-
+- Visual indications
 ---
 
 ## 🛠️ Tech Stack
